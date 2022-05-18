@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+# -*- кодировка: utf-8 -*-
 
-import math
-import sys
+импорт математики
+импорт sys
 
 
-EULER = 0.5772156649015328606
+ЭЙЛЕР = 0,5772156649015328606
 EPS = 1e-10
 
-if __name__ == '__main__':
-    x = float(input("x =  "))
-    if x == 0:
-        print("Error", file=sys.stderr)
-        exit(1)
+если __name__ == '__main__':
+    x = float(input("x = "))
+    если x == 0:
+        print("Ошибка", file=sys.stderr)
+        выход(1)
     a = -x ** 2 / 4
     S, n = a, 1
-    while math.fabs(a) > EPS:
+    в то время как math.fabs(a)> EPS:
         a *= (-1 * x ** 2 * 2 * n) / (2 * (n + 1)) ** 2
         S += a
         n += 1
