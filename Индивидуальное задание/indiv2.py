@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# -*- кодировка: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 """
 Треугольник задан координатами своих вершин. Определить принадлежит
@@ -9,7 +9,7 @@
 
 if __name__ == '__main__':
     ax = float(input('Введите координаты первой вершины:\n'))
-    ay = float(ввод())
+    ay = float(input())
     bx = float(input('Введите координаты второй вершины:\n'))
     by = float(input())
     cx = float(input('Введите координаты третьей вершины:\n'))
@@ -24,7 +24,7 @@ if __name__ == '__main__':
     s1 = abs((ax - xx)*(by - xy) - (bx - xx)*(ay - xy))
     s2 = abs((ax - cx)*(xy - cy) - (xx - cx)*(ay - cy))
     s3 = abs((xx - cx)*(by - cy) - (bx - cx)*(xy - cy))
-    если (s1 + s2 + s3) == s:
+    if (s1 + s2 + s3) == s:
         print('Точка ВХОДИТ в треугольник')
-    ещё:
+    else:
         print('Точка НЕ ВХОДИТ в треугольник')

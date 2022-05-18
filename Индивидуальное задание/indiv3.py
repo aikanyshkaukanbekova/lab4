@@ -1,35 +1,35 @@
 #!/usr/bin/env python3
-# -*- кодировка: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 """
 Составьте программу, которая по номеру дня в году выводит число и месяц
 в общепринятой форме (например, 33-й день года - 2 февраля).
 """
 
-если __name__ == '__main__':
-    num_day = int(input('добавить число дня'))
-    если num_day <= 31:
+if __name__ == '__main__':
+    num_day = int(input('add number day'))
+    if num_day <= 31:
         print(num_day, f'-й день года - ', num_day, '.01', sep='')
-    ещё:
+    else:
         m = 0
-        месяц = 0
-        день = 0
-        за месяц в диапазоне(1, 13):
-            если месяц == 2:
+        month = 0
+        day = 0
+        for month in range(1, 13):
+            if month == 2:
                 a = 28
-            elif (месяц == 1 или месяц == 3 или месяц == 5 или месяц == 7 или
-                  месяц == 8 или месяц == 10 или месяц == 12):
+            elif (month == 1 or month == 3 or month == 5 or month == 7 or
+                  month == 8 or month == 10 or month == 12):
                 a = 31
-            ещё:
+            else:
                 a = 30
             m += a
-            если num_day - m <= 31:
-                день = num_day - m
-                если num_day > 31:
-                    месяц += 1
-                    перерыв
+            if num_day - m <= 31:
+                day = num_day - m
+                if num_day > 31:
+                    month += 1
+                    break
 
-        если месяц < 10:
+        if month < 10:
             print(num_day, f'-й день года - ', day, '.0', month, sep='')
-        ещё:
+        else:
             print(num_day, '-й день года - ', day, '.', month, sep='')
